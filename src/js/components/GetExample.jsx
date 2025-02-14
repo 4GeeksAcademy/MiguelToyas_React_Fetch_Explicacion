@@ -4,7 +4,7 @@
 // Este componente muestra cómo obtener datos de una API.
 // Es como pedirle al camarero que te traiga la carta.
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const GetExample = () => {
   // 🎯 PASO 1: Definimos los estados que necesitamos
@@ -22,16 +22,18 @@ const GetExample = () => {
       try {
         // 👉 Hacemos la petición GET
         // fetch por defecto hace una petición GET, por eso no necesitamos especificar el método
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+
         // 👉 Verificamos si la petición fue exitosa
         if (!response.ok) {
-          throw new Error('¡Vaya! No hemos podido obtener los posts');
+          throw new Error("¡Vaya! No hemos podido obtener los posts");
         }
-        
+
         // 👉 Convertimos la respuesta a JSON
         const data = await response.json();
-        
+
         // 👉 Guardamos los datos en el estado
         setPosts(data.slice(0, 5));
         setLoading(false);
@@ -41,7 +43,7 @@ const GetExample = () => {
       }
     };
 
-    fetchPosts();
+    fetchPosts(); // Llamamos a la función
   }, []); // El array vacío significa que solo se ejecuta cuando el componente se monta
 
   // 🎯 PASO 3: Manejamos los diferentes estados de la interfaz
@@ -71,7 +73,7 @@ const GetExample = () => {
       <div className="card-body">
         {/* Usamos list-group de Bootstrap para mostrar los posts */}
         <div className="list-group">
-          {posts.map(post => (
+          {posts.map((post) => (
             <div key={post.id} className="list-group-item">
               <h5 className="mb-1">{post.title}</h5>
               <p className="mb-1">{post.body}</p>

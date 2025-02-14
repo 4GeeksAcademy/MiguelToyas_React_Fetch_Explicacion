@@ -167,6 +167,6 @@ Son metadatos que enviamos con la petición. Por ejemplo, para indicar que envia
 - Muestra estados de carga al usuario
 - Valida los datos antes de enviarlos
 - Mantén el estado de tu aplicación sincronizado con el servidor
-- Piensa en la experiencia del usuario
+- Piensa en la experiencia del usuario!!!!
 
 ¡Mucha suerte y a programar! 🚀
